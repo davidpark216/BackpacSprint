@@ -52,7 +52,9 @@ function App() {
             </div>
             <div className="cardContent">
               <StarRating />
-              <div className="cardText">여기는 텍스트</div>
+              <div className="cardText">
+                이 곳은 카드 영역입니다. 사용되는 스택은 다음과 같습니다.
+              </div>
             </div>
           </CardUi>
           <CardUi>
@@ -76,7 +78,9 @@ function App() {
               <span className="crossOut">cross out</span>
             </div>
             <div className="cardContent">
-              <div className="cardText">여기는 텍스트</div>
+              <div className="cardText">
+                이 곳은 카드 영역입니다. 사용되는 스택은 다음과 같습니다.
+              </div>
             </div>
           </CardUi>
           <CardUi>
@@ -86,15 +90,15 @@ function App() {
                 src="../images/IMG_7448.jpg"
               ></img>
               <div className="cardRight">
-                <div className="cardTitleArea">
-                  <div className="cardLabel">Card Label</div>
-                  <div className="cardTitle">Card Title</div>
-                  <span className="hilight">Hilight</span>
-                  <span className="crossOut">cross out</span>
+                <div className="cardTitle">Card Title</div>
+                <div className="cardFlexText">
+                  이 곳은 카드 영역입니다. 사용되는 스택은 다음과 같습니다.
+                  javascript, typescript, styled-components 등등 여러가지를
+                  사용해보았습니다.
                 </div>
+
                 <div className="cardContent">
                   <StarRating />
-                  <div className="cardText">여기는 텍스트</div>
                 </div>
               </div>
             </div>
@@ -196,6 +200,21 @@ const CardUi = styled.div`
   .crossOut {
     text-decoration: line-through;
   }
+  .cardText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 10px;
+    margin: 10px 0 10px 0;
+  }
+  .cardFlexText {
+    line-height: 1.6;
+    max-height: 4.8em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
 `;
 
 const TextUiWrap = styled.div`
@@ -208,7 +227,7 @@ const TextUiWrap = styled.div`
   }
   #saving {
     height: 74px;
-    color: rgb(000, 102, 000);
+    color: red;
   }
 `;
 
